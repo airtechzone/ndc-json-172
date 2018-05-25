@@ -1,0 +1,84 @@
+{
+	"OfferPriceRQ": {
+		"$": {
+			"EchoToken": "{{$guid}}",
+			"Version": "IATA2017.2",
+			"xmlns": "http://www.iata.org/IATA/EDIST/2017.2"
+		},
+		"Document": {
+			"Name": {
+				"_": "KRONOS NDC GATEWAY"
+			},
+			"ReferenceVersion": {
+				"_": "1.0"
+			}
+		},
+		"Party": {
+			"Sender": {
+				"TravelAgencySender": {
+					"Name": {
+						"_": "JR TECHNOLOGIES"
+					},
+					"IATA_Number": {
+						"_": "20200154"
+					},
+					"AgencyID": {
+						"_": "00010080"
+					}
+				}
+			},
+			"Participants": {
+				"Participant": [
+					{
+						"AggregatorParticipant": {
+							"$": {
+								"SequenceNumber": "1"
+							},
+							"Name": {
+								"_": "JR TECHNOLOGIES"
+							},
+							"AggregatorID": {
+								"_": "88888888"
+							}
+						}
+					}
+				]
+			}
+		},
+		"Query": {
+			"Offer": [
+				{
+					"$": {
+						"OfferID": "OFFER1",
+						"Owner": "C9",
+						"ResponseID": "201-a1d0c0941163453392c12c6ebec49f7d"
+					},
+					"OfferItem": [
+						{
+							"$": {
+								"OfferItemID": "OFFERITEM1_1"
+							},
+							"PassengerRefs": {
+								"_": "SH1"
+							}
+						}
+					]
+				}
+			]
+		},
+		"DataLists": {
+			"PassengerList": {
+				"Passenger": [
+					{
+						"$": {
+							"PassengerID": "SH1"
+						},
+						"PTC": {
+							"_": "ADT"
+						}
+					}
+				]
+			}
+		}
+	}
+}

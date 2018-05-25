@@ -1,0 +1,98 @@
+{
+	"OrderReshopRQ": {
+		"$": {
+			"EchoToken": "{{$guid}}",
+			"Version": "IATA2017.2",
+			"xmlns": "http://www.iata.org/IATA/EDIST/2017.2"
+		},
+		"Document": {
+			"Name": {
+				"_": "KRONOS NDC GATEWAY"
+			},
+			"ReferenceVersion": {
+				"_": "1.0"
+			}
+		},
+		"Party": {
+			"Sender": {
+				"TravelAgencySender": {
+					"Name": {
+						"_": "JR TECHNOLOGIES"
+					},
+					"IATA_Number": {
+						"_": "20200154"
+					},
+					"AgencyID": {
+						"_": "00010080"
+					}
+				}
+			}
+		},
+		"Query": {
+			"OrderID": {
+				"_": "D16AV5"
+			},
+			"Reshop": {
+				"OrderServicing": {
+					"Add": {
+						"Passengers": {
+							"PassengerReferences": {
+								"_": "PAX2"
+							}
+						}
+					}
+				}
+			}
+		},
+		"DataLists": {
+			"PassengerList": {
+				"Passenger": [
+					{
+						"$": {
+							"PassengerID": "PAX2"
+						},
+						"PTC": {
+							"_": "CHD"
+						},
+						"Individual": {
+							"Gender": {
+								"_": "Male"
+							},
+							"GivenName": [
+								{
+									"_": "Scoopy"
+								}
+							],
+							"Surname": {
+								"_": "Doo"
+							}
+						},
+						"ContactInfoRef": {
+							"_": "SH1_CONT"
+						}
+					}
+				]
+			},
+			"ContactList": {
+				"ContactInformation": [
+					{
+						"$": {
+							"ContactID": "SH1_CONT"
+						},
+						"ContactProvided": [
+							{
+								"EmailAddress": [
+									{
+										"EmailAddressValue": {
+											"_": "doo@test.com"
+										}
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

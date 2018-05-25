@@ -1,0 +1,168 @@
+{
+	"OrderCreateRQ": {
+		"$": {
+			"EchoToken": "{{$guid}}",
+			"Version": "IATA2017.2",
+			"xmlns": "http://www.iata.org/IATA/EDIST/2017.2"
+		},
+		"Document": {
+			"Name": {
+				"_": "KRONOS NDC GATEWAY"
+			},
+			"ReferenceVersion": {
+				"_": "1.0"
+			}
+		},
+		"Party": {
+			"Sender": {
+				"TravelAgencySender": {
+					"Name": {
+						"_": "JR TECHNOLOGIES"
+					},
+					"IATA_Number": {
+						"_": "20200154"
+					},
+					"AgencyID": {
+						"_": "00010080"
+					}
+				}
+			}
+		},
+		"Query": {
+			"Order": {
+				"Offer": [
+					{
+						"$": {
+							"OfferID": "PRICEDOFFER1",
+							"Owner": "C9",
+							"ResponseID": "213-9b453cddea3f4fae95fc7c057bf1b1f2"
+						},
+						"TotalOfferPrice": {
+							"$": {
+								"Code": "EUR"
+							},
+							"_": "746.09"
+						},
+						"OfferItem": [
+							{
+								"$": {
+									"OfferItemID": "OFFERITEM1_1"
+								},
+								"PassengerRefs": {
+									"_": "SH1"
+								}
+							}
+						]
+					}
+				]
+			},
+			"Payments": {
+				"Payment": [
+					{
+						"Type": {
+							"_": "CC"
+						},
+						"Method": {
+							"PaymentCard": {
+								"CardType": {
+									"_": "CREDIT"
+								},
+								"CardCode": {
+									"_": "CA"
+								},
+								"CardNumber": {
+									"_": "5456912312789555"
+								},
+								"SeriesCode": {
+									"_": "888"
+								},
+								"CardHolderName": {
+									"_": "John Jones"
+								},
+								"CardHolderBillingAddress": {
+									"Street": [
+										{
+											"_": "Waterside"
+										}
+									],
+									"CountryCode": {
+										"_": "GR"
+									}
+								},
+								"Surcharge": {
+									"Amount": {
+										"$": {
+											"Code": "EUR"
+										},
+										"_": "0.00"
+									}
+								},
+								"EffectiveExpireDate": {
+									"Effective": {
+										"_": "1212"
+									},
+									"Expiration": {
+										"_": "1220"
+									}
+								}
+							}
+						},
+						"Amount": {
+							"$": {
+								"Code": "EUR"
+							},
+							"_": "746.09"
+						}
+					}
+				]
+			},
+			"DataLists": {
+				"PassengerList": {
+					"Passenger": [
+						{
+							"$": {
+								"PassengerID": "SH1"
+							},
+							"PTC": {
+								"_": "ADT"
+							},
+							"Individual": {
+								"GivenName": [
+									{
+										"_": "John"
+									}
+								],
+								"Surname": {
+									"_": "Jones"
+								}
+							},
+							"ContactInfoRef": {
+								"_": "SH1_CONT"
+							}
+						}
+					]
+				},
+				"ContactList": {
+					"ContactInformation": [
+						{
+							"$": {
+								"ContactID": "SH1_CONT"
+							},
+							"ContactProvided": [
+								{
+									"EmailAddress": [
+										{
+											"EmailAddressValue": {
+												"_": "john@test.com"
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			}
+		}
+	}
+}

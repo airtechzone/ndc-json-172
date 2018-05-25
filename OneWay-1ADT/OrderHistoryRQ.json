@@ -1,0 +1,40 @@
+{
+	"OrderHistoryRQ": {
+		"$": {
+			"EchoToken": "{{$guid}}",
+			"Version": "IATA2017.2",
+			"xmlns": "http://www.iata.org/IATA/EDIST/2017.2"
+		},
+		"Document": {
+			"Name": {
+				"_": "KRONOS NDC GATEWAY"
+			},
+			"ReferenceVersion": {
+				"_": "1.0"
+			}
+		},
+		"Party": {
+			"Sender": {
+				"TravelAgencySender": {
+					"Name": {
+						"_": "JR TECHNOLOGIES"
+					},
+					"IATA_Number": {
+						"_": "20200154"
+					},
+					"AgencyID": {
+						"_": "00010080"
+					}
+				}
+			}
+		},
+		"Query": {
+			"OrderID": {
+				"$": {
+					"Owner": "C9"
+				},
+				"_": "D16AV5"
+			}
+		}
+	}
+}

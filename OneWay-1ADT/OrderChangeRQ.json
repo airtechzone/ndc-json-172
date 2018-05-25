@@ -1,0 +1,155 @@
+{
+	"OrderChangeRQ": {
+		"$": {
+			"EchoToken": "{{$guid}}",
+			"Version": "IATA2017.2",
+			"xmlns": "http://www.iata.org/IATA/EDIST/2017.2"
+		},
+		"Document": {
+			"Name": {
+				"_": "ZEUS NDC GATEWAY"
+			},
+			"ReferenceVersion": {
+				"_": "1.0"
+			}
+		},
+		"Party": {
+			"Sender": {
+				"TravelAgencySender": {
+					"Name": {
+						"_": "Zeus Travel"
+					},
+					"IATA_Number": {
+						"_": "20200154"
+					},
+					"AgencyID": {
+						"$": {
+							"Owner": "C9"
+						},
+						"_": "C9"
+					}
+				}
+			},
+			"Participants": {
+				"Participant": [
+					{
+						"AggregatorParticipant": {
+							"$": {
+								"SequenceNumber": "1"
+							},
+							"Name": {
+								"_": "JR TECHNOLOGIES"
+							},
+							"AggregatorID": {
+								"_": "88888888"
+							}
+						}
+					}
+				]
+			}
+		},
+		"Query": {
+			"OrderID": {
+				"$": {
+					"Owner": "C9"
+				},
+				"_": "D16AV5"
+			},
+			"OrderServicing": {
+				"AcceptOffer": {
+					"Offer": [
+						{
+							"$": {
+								"OfferID": "OfferID6",
+								"Owner": "C9",
+								"ResponseID": "107-af1c554fd2db4ab1ab317a5cd600ab46"
+							},
+							"OfferItem": [
+								{
+									"$": {
+										"OfferItemID": "OfferItemID6_1"
+									},
+									"PassengerRefs": {
+										"_": "PAX2"
+									}
+								}
+							]
+						}
+					]
+				}
+			},
+			"Payments": {
+				"Payment": [
+					{
+						"Type": {
+							"_": "CA"
+						},
+						"Method": {
+							"Cash": {
+								"$": {
+									"CashInd": "true"
+								}
+							}
+						},
+						"Amount": {
+							"$": {
+								"Code": "EUR"
+							},
+							"_": "796.59"
+						}
+					}
+				]
+			}
+		},
+		"DataLists": {
+			"PassengerList": {
+				"Passenger": [
+					{
+						"$": {
+							"PassengerID": "PAX2"
+						},
+						"PTC": {
+							"_": "CHD"
+						},
+						"Individual": {
+							"Gender": {
+								"_": "Male"
+							},
+							"GivenName": [
+								{
+									"_": "Scoopy"
+								}
+							],
+							"Surname": {
+								"_": "Doo"
+							}
+						},
+						"ContactInfoRef": {
+							"_": "CNTCT_PAX2"
+						}
+					}
+				]
+			},
+			"ContactList": {
+				"ContactInformation": [
+					{
+						"$": {
+							"ContactID": "CNTCT_PAX2"
+						},
+						"ContactProvided": [
+							{
+								"EmailAddress": [
+									{
+										"EmailAddressValue": {
+											"_": "doo@test.com"
+										}
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}
